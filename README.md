@@ -35,6 +35,10 @@ Navigate to the project directory `cd Working-Student-Geoinformatics`
 
 To Install dependencies `npm install`
 
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 # Usage
 
 Each exercise is implemented as a separate feature within the Angular application.
@@ -74,10 +78,6 @@ Integrates a WMS layer with a climate change theme (Air temperature at a height 
 Provides functionality to toggle the WMS layer (via Temperature Layer Button).
 
 ![Ex 4 WMS Integration](https://github.com/kano2710/Working-Student-Geoinformatics/assets/35762039/9ecac859-0501-4385-ae39-a8a86e863303)
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Exercise 5: Unit Testing
 

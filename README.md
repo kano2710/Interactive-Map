@@ -65,7 +65,7 @@ Displays popups with location information (Address) using reverse geocoding.
 
 Loads GeoJSON data asynchronously (using GeoJSON file, which shows the boundary of Germany and India).
 
-Styles features based on properties and allows dynamic updates (via Reload GeoJSON Button).
+Style the features based on properties and allow dynamic updates (via Reload GeoJSON Button).
 
 Added features that allow users to draw geo-fencing or mark the area (Different colors for different draw shapes).
 

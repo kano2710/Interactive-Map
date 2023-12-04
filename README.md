@@ -1,6 +1,6 @@
 # This project is a technical task for the Working Student Geoinformatics position at Forliance GmbH.
 
-## I have uploaded a working project to my server. You can visit at `https://test.dhameliya.com/`
+## I have uploaded a working project to my server. You can visit at https://test.dhameliya.com/
 
 # Description
 This project is an Angular-based application that demonstrates advanced features of integrating OpenLayers for map functionalities. It includes multiple exercises showcasing a unique part of map interaction and data integration.
@@ -37,7 +37,7 @@ To Install dependencies `npm install`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The application will automatically reload if you change any of the source files.
 
 # Usage
 
@@ -111,4 +111,4 @@ This declaration affirms my role as the sole developer of this project and the i
 
 ## Contact Information:
 
-For any inquiries or further information regarding this project, please get in touch with me at `dharam.dhameliya.com` or `dharam.dhameliya27@gmail.com`.
+For any inquiries or further information regarding this project, please get in touch with me at https://dharam.dhameliya.com/ or dharam.dhameliya27@gmail.com.

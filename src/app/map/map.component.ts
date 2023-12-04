@@ -43,7 +43,7 @@ export class MapComponent implements OnInit {
   lineStyle = new Style({ stroke: new Stroke({ color: 'green', width: 2 }) });
   polygonStyle = new Style({ stroke: new Stroke({ color: 'blue', width: 2 }), fill: new Fill({ color: 'rgba(0, 0, 255, 0.5)' }) });
   circleStyle = new Style({ stroke: new Stroke({ color: 'yellow', width: 2 }), fill: new Fill({ color: 'rgba(255, 255, 0, 0.5)' }) });
-  
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -214,31 +214,33 @@ export class MapComponent implements OnInit {
 
   // Add draw interaction
   addDrawInteraction(drawType: 'Point' | 'LineString' | 'Polygon' | 'Circle'): void {
-    let style;
-    switch (drawType) {
-      case 'Point':
-        style = this.pointStyle;
-        break;
-      case 'LineString':
-        style = this.lineStyle;
-        break;
-      case 'Polygon':
-        style = this.polygonStyle;
-        break;
-      case 'Circle':
-        style = this.circleStyle;
-        break;
-    }
-    // Add draw interaction only when drawing is enabled
-    if (this.isDrawing && this.drawingLayer && this.drawingLayer.getSource()) { 
-      this.removeDrawInteractions();
+    if (this.isDrawing && this.drawingLayer && this.drawingLayer.getSource()) {
+      let style;
+      switch (drawType) {
+        case 'Point':
+          style = this.pointStyle;
+          break;
+        case 'LineString':
+          style = this.lineStyle;
+          break;
+        case 'Polygon':
+          style = this.polygonStyle;
+          break;
+        case 'Circle':
+          style = this.circleStyle;
+          break;
+      }
+      // Add draw interaction only when drawing is enabled
+      if (this.isDrawing && this.drawingLayer && this.drawingLayer.getSource()) {
+        this.removeDrawInteractions();
 
-      const draw = new Draw({
-        source: this.drawingLayer.getSource() as VectorSource<Feature<Geometry>>,
-        type: drawType,
-        style: style
-      });
-      this.map.addInteraction(draw);
+        const draw = new Draw({
+          source: this.drawingLayer.getSource() as VectorSource<Feature<Geometry>>,
+          type: drawType,
+          style: style
+        });
+        this.map.addInteraction(draw);
+      }
     }
   }
 
@@ -266,8 +268,8 @@ export class MapComponent implements OnInit {
   toggleDrawing(): void {
     this.isDrawing = !this.isDrawing;
     // Add draw interaction and remove map click listener only when drawing is enabled
-    if (this.isDrawing) { 
-      this.map.un('singleclick', this.addMapClickListener);                                  
+    if (this.isDrawing) {
+      this.map.un('singleclick', this.addMapClickListener);
       this.addDrawInteraction('Point');
     } else {
       this.removeDrawInteractions();

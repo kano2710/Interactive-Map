@@ -1,7 +1,38 @@
-<button (click)="toggleWmsLayer()" class="layer-toggle-button"> <!-- Button to toggle the layer -->
-    <img style="height: 24px; width: 24px;" src="../../assets/layers.png" alt="Toggle Layer">
+<button (click)="toggleWmsLayer()" class="set-top-right" title="Temperature Layer"> <!-- Button to toggle the layer -->
+    <span class="iconify" data-icon="bx:layer" style="color: black;" data-width="24" data-height="24"></span>
 </button>
+<button (click)="reloadPage()" class="set-top-right" style="margin-top: 50px;" title="Reload Map"> <!-- Reload page -->
+    <span class="iconify" data-icon="mdi:refresh" style="color: black;" data-width="24" data-height="24"></span>
+</button>
+<button (click)="loadGeoJson()" class="set-top-right" style="margin-top: 100px;" title="Reload GeoJSON Data"> <!-- Reload GeoJSON aata -->
+    <span class="iconify" data-icon="mdi:update" style="color: black;" data-width="24" data-height="24"></span>
+</button>
+<button (click)="toggleDrawing()" class="set-top-right" style="margin-top: 150px;"> <!-- Toggle button to draw -->
+    <span class="iconify" [class]="isDrawing ? 'stopDrawing' : 'startDrawing'"></span>
+</button>
+
+<div *ngIf="isDrawing">
+    <button (click)="addDrawInteraction('Point')" class="set-top-right"
+        style="margin-top: 200px; background-color: red;" title="Point"> <!-- Button to draw a point -->
+        <span class="iconify" data-icon="tabler:point-filled" style="color: black;" data-width="24"
+            data-height="24"></span>
+    </button>
+    <button (click)="addDrawInteraction('LineString')" class="set-top-right"
+        style="margin-top: 250px; background: green;" title="Line"> <!-- Button to draw a line -->
+        <span class="iconify" data-icon="uil:line-alt" style="color: black;" data-width="24" data-height="24"></span>
+    </button>
+    <button (click)="addDrawInteraction('Polygon')" class="set-top-right"
+        style="margin-top: 300px; background-color: blue;" title="Polygon"> <!-- Button to draw a polygon -->
+        <span class="iconify" data-icon="tabler:polygon" style="color: black;" data-width="24" data-height="24"></span>
+    </button>
+    <button (click)="addDrawInteraction('Circle')" class="set-top-right"
+        style="margin-top: 350px; background-color: yellow;" title="Circle"> <!-- Button to draw a circle -->
+        <span class="iconify" data-icon="ph:circle" style="color: black;" data-width="24" data-height="24"></span>
+    </button>
+</div>
+
 <div id="map" class="map-container"></div> <!-- This is the map container -->
+
 <div id="popup" class="ol-popup"> <!-- This is the popup container -->
     <a href="#" id="popupClose" class="ol-popup-closer"></a> <!-- This is the popup closer -->
     <div id="popup-content" class="popup-content"></div> <!-- This is the popup content -->

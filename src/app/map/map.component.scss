@@ -2,10 +2,11 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
 }
 
+// CSS for the popup
 .ol-popup {
     position: absolute;
     background-color: white;
@@ -18,7 +19,8 @@
     z-index: 10;
 }
 
-.ol-popup:after, .ol-popup:before {
+.ol-popup:after,
+.ol-popup:before {
     top: 100%;
     border: solid transparent;
     content: " ";
@@ -38,7 +40,7 @@
 .ol-popup:before {
     border-top-color: #ddd;
     border-width: 11px;
-    left: 50%; 
+    left: 50%;
     margin-left: -11px;
 }
 
@@ -63,15 +65,36 @@
     line-height: 1.5;
 }
 
-.layer-toggle-button {
+// CSS for buttons and drawing controls
+.set-top-right {
     position: absolute;
+    border: 1px solid #ddd;
     top: 10px;
     right: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
-    z-index: 20; /* Higher than the map elements */
+    z-index: 20;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.set-top-right:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+}
+
+.stopDrawing {
+    font-family: "Iconify";
+    font-size: 24px;
+    background: url('https://api.iconify.design/ic/round-stop.svg?color=black&width=24&height=24') no-repeat center center / contain;
+    content: url('https://api.iconify.design/ic/round-stop.svg?color=black&width=24&height=24');
+}
+
+.startDrawing {
+    font-family: "Iconify";
+    font-size: 24px;
+    background: url('https://api.iconify.design/ic/baseline-draw.svg?color=black&width=24&height=24') no-repeat center center / contain;
+    content: url('https://api.iconify.design/ic/baseline-draw.svg?color=black&width=24&height=24');
 }

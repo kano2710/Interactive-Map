@@ -1,0 +1,14 @@
+// set copywrite statement to bottom right
+.ol-attribution {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0.5em !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+// hide rotate and attribution buttons
+button[title="Attributions"],
+button[title="Reset rotation"] {
+    display: none !important;
+}

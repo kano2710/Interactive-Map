@@ -101,11 +101,11 @@ I, Dharam Mukeshbhai Dhameliya, declare that I have developed this project. This
 
 ## My Contributions:
 
-I Conceptualized and implemented all the exercises as part of this project.
+I conceptualized and implemented all the exercises as a part of this project.
 
-I Ensured the use of best practices in Angular development and integration with OpenLayers.
+I ensured the use of best practices in Angular development and integration with OpenLayers.
 
-I Carried out thorough testing and debugging to ensure the functionality and reliability of the project.
+I carried out testing and debugging to ensure the functionality and reliability of the project.
 
 This declaration affirms my role as the sole developer of this project and the intellectual owner of the code and design implemented herein.
 

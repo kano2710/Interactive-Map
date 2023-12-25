@@ -1,7 +1,5 @@
 # This project is a technical task for the Working Student Geoinformatics position at Forliance GmbH.
 
-## I have uploaded a working project to my server. You can visit at https://test.dhameliya.com/
-
 # Description
 This project is an Angular-based application that demonstrates advanced features of integrating OpenLayers for map functionalities. It includes multiple exercises showcasing a unique part of map interaction and data integration.
 

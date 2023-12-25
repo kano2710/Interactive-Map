@@ -91,7 +91,7 @@ export class MapComponent implements OnInit {
     // Open Weather Map Layer
     this.wmsLayer = new TileLayer({
       source: new XYZ({
-        url: 'https://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?appid=f8d5a3b4b35fdb8afca577abbbfc54c7', // TA2(Air temperature at a height of 2 meters) layer
+        url: 'https://maps.openweathermap.org/maps/2.0/weather/TA2/{z}/{x}/{y}?appid={APIKey}', // TA2(Air temperature at a height of 2 meters) layer
       }),
       visible: false, // Default visibility (currently hidden)
     });
